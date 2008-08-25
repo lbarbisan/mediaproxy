@@ -13,9 +13,9 @@ import com.wpg.proxy.HttpMessageHandler;
 import com.wpg.proxy.HttpMessageRequest;
 import com.wpg.proxy.HttpMessageResponse;
 
-public class MediaHandler implements HttpMessageHandler {
+public class DeezerMediaHandler implements HttpMessageHandler {
 
-	private final static Logger logger = Logger.getLogger(MediaHandler.class);
+	private final static Logger logger = Logger.getLogger(DeezerMediaHandler.class);
 	
 	@Override
 	public void failed(Exception exception) {

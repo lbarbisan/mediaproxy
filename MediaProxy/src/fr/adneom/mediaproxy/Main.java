@@ -6,7 +6,8 @@ import java.net.UnknownHostException;
 import com.wpg.proxy.Proxy;
 import com.wpg.proxy.ProxyRegistry;
 
-import fr.adneom.mediaproxy.handler.MediaHandler;
+import fr.adneom.mediaproxy.handler.DeezerMediaHandler;
+import fr.adneom.mediaproxy.handler.JiwaMediaHandler;
 
 public class Main {
 
@@ -19,9 +20,10 @@ public class Main {
 	        InetAddress adress = InetAddress.getLocalHost();
 	        //InetAddress adress = InetAddress.getByAddress(new byte[] {(byte)192,(byte)168,75,10});
 				
-			MediaHandler handler =  new MediaHandler();
+			DeezerMediaHandler handler =  new DeezerMediaHandler();
+			JiwaMediaHandler handler2 =  new JiwaMediaHandler();
 			ProxyRegistry.addHandler(handler);
-			
+			ProxyRegistry.addHandler(handler2);
 			Proxy proxy = new Proxy(adress , 8000, 0);
 			proxy.run();
 	}
